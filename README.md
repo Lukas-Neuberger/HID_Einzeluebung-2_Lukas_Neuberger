@@ -13,7 +13,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
   ## Development server json
   
-  Run `npm run server`. 
+  Run `npm run server`. `http://localhost:5000/` - for databank
 
   ## Add angular material
 
