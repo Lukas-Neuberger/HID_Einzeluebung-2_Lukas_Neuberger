@@ -1,0 +1,14 @@
+<mat-toolbar color="primary" class="flex justify-content-between">
+    <!-- Titel -->
+    <span class="title">{{ title }}</span>
+  
+    <!-- Navigation Links -->
+    <nav>
+      <a mat-button [routerLink]="['/dashboard']">Dashboard</a>
+      <a mat-button [routerLink]="['/about']">About</a>
+    </nav>
+  
+    <!-- Logo -->
+    <img src="{{ imagePath }}" alt="Logo" />
+  </mat-toolbar>
+  

@@ -1,0 +1,36 @@
+/* Zentrierte Darstellung im Grid */
+.row {
+    min-height: 100px;
+  }
+  
+/* Zentriere Content und erhöhe Zeilenhöhe nur für Desktop */
+@media (min-width: 768px) {
+    .row {
+      height: 80px; /* Beispielhöhe für jede Row */
+      display: flex;
+      align-items: center;
+    }
+  }
+  
+  /* Mobile Ansicht */
+  @media (max-width: 767px) {
+    table {
+      font-size: 0.9rem; /* Kleinere Schriftart für mobile Tabellen */
+    }
+  }
+  
+  .success-snackbar {
+    background-color: #4caf50;
+    color: white;
+    text-align: center;
+    font-size: 16px;
+  }
+  form {
+    margin-bottom: 100px; /* Abstand nach unten */
+  }
+  
+  h2 {
+    margin-bottom: 10px; /* Abstand zur Überschrift */
+  }
+  
+  

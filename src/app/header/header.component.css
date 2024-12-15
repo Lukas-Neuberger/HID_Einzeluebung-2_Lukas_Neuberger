@@ -1,0 +1,22 @@
+.flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  img {
+    width: 100px;
+    height: auto;
+  }
+  
+  nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 15px;
+  }
+  
+  .title {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
