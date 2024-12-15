@@ -5,7 +5,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ## Step by Step instruction
   ## install npm
   
-  Run 'npm install'
+  Run `npm install`
   
   ## Development server
 
@@ -13,11 +13,11 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
   ## Development server json
   
-  Run 'npm run server'
+  Run `npm run server`. 
 
   ## Add angular material
 
-  Run 'ng add @angular/material'
+  Run `ng add @angular/material`
  
 ## Code scaffolding
 
