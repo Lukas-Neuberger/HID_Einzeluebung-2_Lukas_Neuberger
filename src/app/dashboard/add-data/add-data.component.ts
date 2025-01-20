@@ -59,7 +59,9 @@ export class AddDataComponent implements OnInit {
       // Snackbar anzeigen
       this.snackBar.open('Anmeldung erfolgreich erfasst!', 'Schließen', {
         duration: 3000,
-        panelClass: ['success-snackbar'] // Optionales Styling
+        panelClass: ['success-snackbar'] ,// Optionales Styling
+        verticalPosition: 'top', 
+        horizontalPosition: 'center'
       });
   
       // Formular zurücksetzen

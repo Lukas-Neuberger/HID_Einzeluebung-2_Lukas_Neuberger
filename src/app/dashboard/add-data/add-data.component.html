@@ -6,33 +6,33 @@
         <!-- Name Input -->
         <mat-form-field appearance="outline" class="w-100 mb-3">
           <mat-label>Name</mat-label>
-          <input matInput placeholder="Name eingeben" formControlName="name" />
-          <mat-error *ngIf="registrationForm.get('name')?.hasError('required')">
-            Name ist erforderlich.
+          <input matInput placeholder="Name eingeben" formControlName="name" (blur)="registrationForm.get('name')?.markAsTouched()" />
+          <mat-error *ngIf="registrationForm.get('name')?.hasError('required') && registrationForm.get('name')?.touched">
+            Bitte geben Sie Ihren Namen ein.
           </mat-error>
         </mat-form-field>
   
         <!-- Birthdate Input -->
         <mat-form-field appearance="outline" class="w-100 mb-3">
           <mat-label>Geburtsdatum</mat-label>
-          <input matInput [matDatepicker]="picker" placeholder="Geburtsdatum auswählen" formControlName="birthdate" />
+          <input matInput [matDatepicker]="picker" placeholder="Geburtsdatum auswählen" formControlName="birthdate" (blur)="registrationForm.get('birthdate')?.markAsTouched()" />
           <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
           <mat-datepicker #picker></mat-datepicker>
-          <mat-error *ngIf="registrationForm.get('birthdate')?.hasError('required')">
-            Geburtsdatum ist erforderlich.
+          <mat-error *ngIf="registrationForm.get('birthdate')?.hasError('required') && registrationForm.get('birthdate')?.touched">
+            Bitte wählen Sie Ihr Geburtsdatum aus.
           </mat-error>
         </mat-form-field>
   
         <!-- Course Dropdown -->
         <mat-form-field appearance="outline" class="w-100 mb-3">
           <mat-label>Kursauswahl</mat-label>
-          <mat-select formControlName="courseId">
+          <mat-select formControlName="courseId" (selectionChange)="registrationForm.get('courseId')?.markAsTouched()">
             <mat-option *ngFor="let course of storeService.courses" [value]="course.id">
               {{ course.name }} - {{ course.instructor }}
             </mat-option>
           </mat-select>
-          <mat-error *ngIf="registrationForm.get('courseId')?.hasError('required')">
-            Kursauswahl ist erforderlich.
+          <mat-error *ngIf="registrationForm.get('courseId')?.hasError('required') && registrationForm.get('courseId')?.touched">
+            Bitte wählen Sie einen Kurs aus.
           </mat-error>
         </mat-form-field>
   
@@ -42,9 +42,9 @@
         </mat-checkbox>
   
         <!-- Submit Button -->
-        <button mat-raised-button color="primary" type="submit" class="w-100">
+        <button mat-raised-button color="accent" type="submit" class="w-100 btn-lg">
           Erfassen
-        </button>
+        </button> 
       </div>
     </div>
   </form>

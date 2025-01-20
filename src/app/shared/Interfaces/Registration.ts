@@ -5,5 +5,7 @@ export interface Registration {
     name: string;
     birthdate: string,
     course: Course,
-    courseId: number
+    courseId: number,
+    registrationDate: string;  // Neues Feld für das Anmeldedatum
+    deleting?: boolean;  // Hinzugefügt für die Anzeige des Loading Spinners
   }

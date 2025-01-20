@@ -22,7 +22,7 @@
   .success-snackbar {
     background-color: #4caf50;
     color: white;
-    text-align: center;
+    text-align: top;
     font-size: 16px;
   }
   form {
@@ -33,4 +33,27 @@
     margin-bottom: 10px; /* Abstand zur Überschrift */
   }
   
+  button {
+    font-size: 1.2rem;  /* Größere Schrift für bessere Lesbarkeit */
+    font-weight: bold;  /* Fett für bessere Sichtbarkeit */
+    padding: 15px 20px; /* Mehr Padding für bessere Klickbarkeit */
+    border-radius: 8px; /* Abgerundete Ecken für modernes Design */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Schatten für bessere Erkennbarkeit */
+  }
+  
+  mat-error {
+    color: #d32f2f;  /* Rote Farbe für bessere Sichtbarkeit */
+    font-size: 0.9rem;
+    font-weight: bold;
+  }
+  
+  input.ng-touched.ng-invalid,
+  mat-select.ng-touched.ng-invalid {
+    border: 1px solid #d32f2f; /* Rote Umrandung bei ungültiger Eingabe */
+    background-color: #ffebee; /* Leichter roter Hintergrund */
+  }
+  
+  mat-form-field {
+    margin-bottom: 1.5rem;  /* Größerer Abstand zwischen Feldern */
+  }
   

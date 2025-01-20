@@ -27,7 +27,7 @@ export class BackendService {
       }
     };
 
-    this.http.get<Registration[]>(`http://localhost:5000/registrations?_expand=course&_page=${page}&_limit=2`, options).subscribe(data => {
+    this.http.get<Registration[]>(`http://localhost:5000/registrations?_expand=course&_page=${page}&_limit=4`, options).subscribe(data => {
       this.storeService.registrations = data.body!;
       this.storeService.registrationTotalCount = Number(data.headers.get('X-Total-Count'));
       this.storeService.registrationsLoading = false;
@@ -35,8 +35,19 @@ export class BackendService {
   }
 
   public addRegistration(registration: any, page: number) {
-    this.http.post('http://localhost:5000/registrations', registration).subscribe(_ => {
+    // Füge das aktuelle Datum zur Registrierung hinzu
+    const newRegistration = {
+      ...registration,
+      registrationDate: new Date().toISOString().split('T')[0]  // YYYY-MM-DD Format
+    };
+  
+    this.http.post('http://localhost:5000/registrations', newRegistration).subscribe(_ => {
       this.getRegistrations(page);
-    })
+    });
   }
+  
+  public deleteRegistration(registrationId: string) {
+    return this.http.delete(`http://localhost:5000/registrations/${registrationId}`);
+  }
+  
 }

@@ -1,39 +1,132 @@
 /* Zentriere Inhalte für Desktop */
 @media (min-width: 768px) {
-    .row {
-      display: flex;
-      align-items: center;
-    }
+  .row {
+    display: flex;
+    align-items: center;
   }
-  
-  /* Mobile Ansicht */
-  @media (max-width: 767px) {
-    table {
-      font-size: 0.9rem;
-    }
+}
+
+/* Mobile Ansicht */
+@media (max-width: 767px) {
+  table {
+    font-size: 0.85rem;  /* Kleinere Schriftart für mobile Ansicht */
   }
-  
-  /* Snackbar Styling */
-  .success-snackbar {
-    background-color: #4caf50;
-    color: white;
-    text-align: center;
-    font-size: 16px;
+
+  th, td {
+    padding: 10px 15px;  /* Weniger Innenabstand für kleinere Bildschirme */
   }
-  
-  /* Abstand nach unten für Formular */
-  form {
-   
-    margin-bottom: 2rem; /* Kleiner Abstand */
+
+  h3, h2 {
+    font-size: 1.2rem;  /* Kleinere Überschriftengröße für mobile Geräte */
   }
-  table-dark{
-    margin-top: 70px; /* Kleiner Abstand */
+}
+
+/* Snackbar Styling */
+.success-snackbar {
+  background-color: #4caf50;
+  color: white;
+  text-align: center;
+  font-size: 16px;
+}
+
+/* Abstand nach unten für Formular */
+form {
+  margin-bottom: 2rem; /* Kleiner Abstand */
+}
+
+table-dark {
+  margin-top: 70px; /* Kleiner Abstand */
+}
+
+h3 {
+  margin-top: 150px; /* Kleiner Abstand */
+  margin-bottom: 1.5rem; /* Kleinere Überschriften-Margin */
+}
+
+h2 {
+  margin-bottom: 1.5rem; /* Kleinere Überschriften-Margin */
+}
+
+/* Pagination Button Styling */
+.text-center .btn {
+  font-size: 1rem;        /* Größere Schrift für bessere Lesbarkeit */
+  margin: 5px;            /* Abstand zwischen Buttons */
+  padding: 10px 20px;     /* Größere Klickfläche */
+  border-radius: 5px;     /* Abgerundete Ecken */
+}
+
+.text-center .btn.active {
+  background-color: #007bff; /* Blaue Farbe für aktive Seite */
+  color: white;
+  font-weight: bold;
+}
+
+.text-center .btn:hover {
+  background-color: #0056b3; /* Hover-Effekt für Buttons */
+  color: white;
+}
+
+/* Tabellenoptimierung */
+table {
+  border-collapse: separate;
+  border-spacing: 0 10px;  /* Abstand zwischen den Zeilen */
+}
+
+/* Tabellenkopf Styling */
+thead th {
+  background-color: #333;  /* Dunklere Hintergrundfarbe */
+  color: #ffffff;          /* Weiße Schriftfarbe */
+  font-weight: bold;
+  text-align: center;
+  font-size: 1.1rem;
+  padding: 15px;
+}
+
+/* Allgemeine Tabellenzellen-Optimierung */
+th, td {
+  padding: 15px 20px;  /* Mehr Innenabstand für bessere Lesbarkeit */
+  text-align: left;
+  font-size: 1rem;
+}
+
+/* Vergrößere die Spaltenbreite für "Alle Termine" */
+th.termine,
+td.termine {
+    width: 40%;  /* Vergrößert die Spalte */
+    min-width: 250px;  /* Mindestbreite für kleinere Bildschirme */
+}
+
+th:last-child,
+td:last-child {
+    width: 15%;  /* Vergrößert die Spalte */
+    min-width: 200px;  /* Mindestbreite für kleinere Bildschirme */
+}
+
+td button {
+  padding: 5px 10px;  /* Kleinere Button-Größe */
+  font-size: 0.9rem;
+}
+
+
+/* Termin-Spalten Styling */
+td ul {
+  padding-left: 20px;
+  font-size: 1rem;
+  max-width: 100%;
+  word-wrap: break-word; /* Umbruch für lange Inhalte */
+}
+
+td ul li {
+  line-height: 1.8;  /* Mehr Abstand für bessere Lesbarkeit */
+}
+
+/* Tabelle auf Desktop optimieren */
+@media (min-width: 768px) {
+  table {
+      width: 100%;
   }
-  h3 {
-    margin-top: 150px; /* Kleiner Abstand */
-    margin-bottom: 1.5rem; /* Kleinere Überschriften-Margin */
-  }
-  h2 {
-    margin-bottom: 1.5rem; /* Kleinere Überschriften-Margin */
-  }
-  
+}
+/* Abstand der Pagination unterhalb der Tabelle verringern */
+.text-center.mt-4 {
+  margin-top: 5px;  /* Reduzierter Abstand */
+}
